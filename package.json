@@ -1,0 +1,30 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "this is walk through tutorial for namaste react course",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devshvms/namaste_react.git"
+  },
+  "keywords": [
+    "react",
+    "javascript"
+  ],
+  "author": "dev.shvms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devshvms/namaste_react/issues"
+  },
+  "homepage": "https://github.com/devshvms/namaste_react#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
