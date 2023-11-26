@@ -1,22 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const heading1 = React.createElement("h1", {id: "heading1"}, "Hello World from React!!");
-const heading2 = React.createElement("h2", {id: "heading2"}, "Hello World from React!!");
+//  React Element => Object => HTMLElement(render) while convert this react element into HTML
 
-const parent = React.createElement(
-    "div", 
-    {id: "parent"}, 
-    [
-        React.createElement(
-        "div", 
-        {id: "child1"}, 
-        heading1),
-        React.createElement(
-            "div", 
-            {id: "child2"}, 
-            heading2),
-    ])
-console.log(parent);
+// const heading = React.createElement(
+//     "h1", 
+//     {id: "heading"}, 
+//     "Namaste React 🤖");
+
+// JSX in no ta HTML but syntex like HTML, XML
+// JSX --transpiled by Babel--> JS object
+const jsxHeading = (<h1 id="heading">Namaste React from JSX 🤖</h1>);
+const one = 1;
+const SpanComponent = () =>(
+    <span className="spanComponent">
+        {one}+{one}={one+one}
+    </span>
+);
+
+// React Functional component
+const HeadingComponent = () => (
+    <div className='head'>
+        {jsxHeading}
+        {SpanComponent()}
+        <br></br>
+        <SpanComponent/>
+    </div>
+    
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(jsxHeading);
+root.render(<HeadingComponent/>);
